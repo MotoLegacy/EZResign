@@ -1,5 +1,5 @@
 # EZResign
-Python script to easily resign PlayStation 3 .PKGs and their respective .RAP files for use with the PS3Han, using [PS3Xploit/PS3xploit-resigner 2.0.0](https://github.com/PS3Xploit/PS3xploit-resigner).
+Python script to easily resign PlayStation 3 .PKGs and their respective .RAP files for use with PS3Han, using [PS3Xploit/PS3xploit-resigner 2.0.0](https://github.com/PS3Xploit/PS3xploit-resigner).
 
 ## Prerequisites:
 * Python 3.X (to run EZResign)
