@@ -16,6 +16,7 @@ Python script to easily resign PlayStation 3 .PKGs and their respective .RAP fil
 ## To-Do
 * Script clean-up
 * Update PS3xploit-resigner (for native Linux binary)
+* Edit PS3xploit-resigner to work with Python 3.X
 
 ## Special Thanks
 * esc0rtd3w, bguerville, Habib, and other members of the PS3xploit Team
