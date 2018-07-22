@@ -5,7 +5,7 @@ Python script to easily resign PlayStation 3 .PKGs and their respective .RAP fil
 * Python 3.X (to run EZResign)
 * Python 2.7 (to run PS3xploit-resigner)
 * WINE (for Linux users.. UNTESTED!)
-* Your console's idps.hex and act.dat placed in EZResign's bin folder
+* Your console's idps.hex and act.dat placed in EZResign's utils folder
 
 ## Usage
 1. Place all .PKGs and .RAPs in the same directory as EZResign.py

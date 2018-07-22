@@ -1,5 +1,5 @@
 ''' Python script to easily resign PlayStation 3 .PKGs and their .RAP
-    files for use with the PS3Han.
+    files for use with PS3Han.
     Created by MotoLegacy'''
 
 import os
@@ -15,9 +15,9 @@ def getOS():
     platforms = {
         'linux1' : 'Linux',
         'linux2' : 'Linux',
-        'darwin' : 'OS X',
         'win32' : 'Windows',
     }
+
     if sys.platform not in platforms:
         return sys.platform
     else:
@@ -36,7 +36,7 @@ def package():
     for raps in os.listdir('.'):
         if raps.endswith('.rap'):
             count += 1
-            shutil.move(raps, 'bin/raps/{}'.format(raps))
+            shutil.move(raps, 'utils/raps/{}'.format(raps))
 
     #no rap files found
     if count == 0:
@@ -46,16 +46,16 @@ def package():
 
     #package on windows
     if getOS() == 'Windows':
-        os.system('bin\SilentCMD bin\\resign_all.bat')
+        os.system('utils\SilentCMD utils\\resign_all.bat')
     
     #package on linux
     elif getOS() == 'Linux':
-        os.system('nohup wine bin/resign_all.bat /dev/null 2>&1 &')
+        os.system('nohup wine utils/resign_all.bat /dev/null 2>&1 &')
 
-    shutil.move('bin/{}'.format(rappkg), './output/{}'.format(rappkg))
+    shutil.move('utils/{}'.format(rappkg), './output/{}'.format(rappkg))
 
     #copy signed_act.dat to output
-    shutil.move('bin/signed_act.dat', 'output/act.dat')
+    shutil.move('utils/signed_act.dat', 'output/act.dat')
 
 
 
@@ -76,11 +76,11 @@ def resign(pkg):
 
     #resign on windows
     if getOS() == 'Windows':
-        os.system('bin\SilentCMD bin\\ps3xploit_rifgen_edatresign.exe {}'.format(pkg))
+        os.system('utils\SilentCMD utils\\ps3xploit_rifgen_edatresign.exe {}'.format(pkg))
 
     #resign on linux
     elif getOS() == 'Linux':
-        os.system('nohup wine bin/ps3xploit_rifgen_edatresign.exe {} /dev/null 2>&1 &'.format(pkg))
+        os.system('nohup wine utils/ps3xploit_rifgen_edatresign.exe {} /dev/null 2>&1 &'.format(pkg))
 
     #resigner doesn't support OSX..  
     else:
